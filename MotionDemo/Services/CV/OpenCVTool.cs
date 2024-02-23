@@ -358,7 +358,16 @@ namespace Services
 
             Size size;
             size.Width = src.Cols; size.Height = src.Rows;
-            //model
+
+            Cv2.GaussianBlur(src, src, new Size(5, 5), 1);
+            Mat gx, gy;
+            gx = new Mat(size.Height, size.Width, MatType.CV_16SC1);
+            gy = new Mat(size.Height, size.Width, MatType.CV_16SC1);
+            Cv2.Sobel(src, gx, MatType.CV_16S, 1, 0, 3);
+            Cv2.Sobel(src, gy, MatType.CV_16S, 0, 1, 3);
+
+            Mat nmsEdges = new Mat(size.Height, size.Width, MatType.CV_32F);
+            
         }
         #endregion
 

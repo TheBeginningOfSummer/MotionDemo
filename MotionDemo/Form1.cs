@@ -1,4 +1,5 @@
 ﻿using MotionDemo.Services;
+using OpenCvSharp;
 using Services;
 using System;
 using System.IO;
@@ -232,6 +233,15 @@ namespace MotionDemo
         private void TSM设置_Click(object sender, EventArgs e)
         {
             setting.CameraSet();
+        }
+
+        private void BTN模板匹配测试_Click(object sender, EventArgs e)
+        {
+            //Mat img = Cv2.ImRead("C:\\Users\\1\\Desktop\\test\\测试图片\\test1.0.png");
+            //Mat temp = Cv2.ImRead("C:\\Users\\1\\Desktop\\test\\测试图片\\test1.2.png");
+            //Mat result = Match.MatchingMethod(img, temp);
+            //Cv2.ImShow("match", result);
+
         }
     }
 }

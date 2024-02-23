@@ -64,21 +64,23 @@
             this.LB目标位置 = new System.Windows.Forms.Label();
             this.TP数据 = new System.Windows.Forms.TabPage();
             this.TP扫码测试 = new System.Windows.Forms.TabPage();
+            this.TB_Code = new System.Windows.Forms.TextBox();
+            this.LB码值 = new System.Windows.Forms.Label();
             this.MS_Camera = new System.Windows.Forms.MenuStrip();
             this.TSM文件 = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM打开二维码 = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM存为二维码 = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM存为条形码 = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM设置 = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM相机 = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM开始录制 = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM停止录制 = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM开始扫码 = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM停止扫码 = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM拍摄 = new System.Windows.Forms.ToolStripMenuItem();
-            this.LB码值 = new System.Windows.Forms.Label();
+            this.TP模板匹配 = new System.Windows.Forms.TabPage();
             this.OFD识别图片码 = new System.Windows.Forms.OpenFileDialog();
-            this.TB_Code = new System.Windows.Forms.TextBox();
-            this.TSM设置 = new System.Windows.Forms.ToolStripMenuItem();
+            this.BTN模板匹配测试 = new System.Windows.Forms.Button();
             this.TC_Main.SuspendLayout();
             this.TP轴测试.SuspendLayout();
             this.GB特殊信号控制.SuspendLayout();
@@ -90,6 +92,7 @@
             this.GB轴控制.SuspendLayout();
             this.TP扫码测试.SuspendLayout();
             this.MS_Camera.SuspendLayout();
+            this.TP模板匹配.SuspendLayout();
             this.SuspendLayout();
             // 
             // TC_Main
@@ -98,6 +101,7 @@
             this.TC_Main.Controls.Add(this.TP轴测试);
             this.TC_Main.Controls.Add(this.TP数据);
             this.TC_Main.Controls.Add(this.TP扫码测试);
+            this.TC_Main.Controls.Add(this.TP模板匹配);
             this.TC_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TC_Main.Location = new System.Drawing.Point(0, 0);
             this.TC_Main.Name = "TC_Main";
@@ -485,6 +489,23 @@
             this.TP扫码测试.Text = "扫码测试";
             this.TP扫码测试.UseVisualStyleBackColor = true;
             // 
+            // TB_Code
+            // 
+            this.TB_Code.Location = new System.Drawing.Point(13, 68);
+            this.TB_Code.Name = "TB_Code";
+            this.TB_Code.Size = new System.Drawing.Size(734, 21);
+            this.TB_Code.TabIndex = 2;
+            // 
+            // LB码值
+            // 
+            this.LB码值.AutoSize = true;
+            this.LB码值.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LB码值.Location = new System.Drawing.Point(8, 38);
+            this.LB码值.Name = "LB码值";
+            this.LB码值.Size = new System.Drawing.Size(66, 27);
+            this.LB码值.TabIndex = 1;
+            this.LB码值.Text = "码值";
+            // 
             // MS_Camera
             // 
             this.MS_Camera.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -510,22 +531,29 @@
             // TSM打开二维码
             // 
             this.TSM打开二维码.Name = "TSM打开二维码";
-            this.TSM打开二维码.Size = new System.Drawing.Size(180, 22);
+            this.TSM打开二维码.Size = new System.Drawing.Size(136, 22);
             this.TSM打开二维码.Text = "打开二维码";
             this.TSM打开二维码.Click += new System.EventHandler(this.TSM打开二维码_Click);
             // 
             // TSM存为二维码
             // 
             this.TSM存为二维码.Name = "TSM存为二维码";
-            this.TSM存为二维码.Size = new System.Drawing.Size(180, 22);
+            this.TSM存为二维码.Size = new System.Drawing.Size(136, 22);
             this.TSM存为二维码.Text = "存为二维码";
             this.TSM存为二维码.Click += new System.EventHandler(this.TSM存为二维码_Click);
             // 
             // TSM存为条形码
             // 
             this.TSM存为条形码.Name = "TSM存为条形码";
-            this.TSM存为条形码.Size = new System.Drawing.Size(180, 22);
+            this.TSM存为条形码.Size = new System.Drawing.Size(136, 22);
             this.TSM存为条形码.Text = "存为条形码";
+            // 
+            // TSM设置
+            // 
+            this.TSM设置.Name = "TSM设置";
+            this.TSM设置.Size = new System.Drawing.Size(136, 22);
+            this.TSM设置.Text = "设置";
+            this.TSM设置.Click += new System.EventHandler(this.TSM设置_Click);
             // 
             // TSM相机
             // 
@@ -569,33 +597,29 @@
             this.TSM拍摄.Size = new System.Drawing.Size(124, 22);
             this.TSM拍摄.Text = "拍摄";
             // 
-            // LB码值
+            // TP模板匹配
             // 
-            this.LB码值.AutoSize = true;
-            this.LB码值.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LB码值.Location = new System.Drawing.Point(8, 38);
-            this.LB码值.Name = "LB码值";
-            this.LB码值.Size = new System.Drawing.Size(66, 27);
-            this.LB码值.TabIndex = 1;
-            this.LB码值.Text = "码值";
+            this.TP模板匹配.Controls.Add(this.BTN模板匹配测试);
+            this.TP模板匹配.Location = new System.Drawing.Point(4, 22);
+            this.TP模板匹配.Name = "TP模板匹配";
+            this.TP模板匹配.Size = new System.Drawing.Size(792, 424);
+            this.TP模板匹配.TabIndex = 4;
+            this.TP模板匹配.Text = "模板匹配测试";
+            this.TP模板匹配.UseVisualStyleBackColor = true;
             // 
             // OFD识别图片码
             // 
             this.OFD识别图片码.FileName = "openFileDialog";
             // 
-            // TB_Code
+            // BTN模板匹配测试
             // 
-            this.TB_Code.Location = new System.Drawing.Point(13, 68);
-            this.TB_Code.Name = "TB_Code";
-            this.TB_Code.Size = new System.Drawing.Size(734, 21);
-            this.TB_Code.TabIndex = 2;
-            // 
-            // TSM设置
-            // 
-            this.TSM设置.Name = "TSM设置";
-            this.TSM设置.Size = new System.Drawing.Size(180, 22);
-            this.TSM设置.Text = "设置";
-            this.TSM设置.Click += new System.EventHandler(this.TSM设置_Click);
+            this.BTN模板匹配测试.Location = new System.Drawing.Point(380, 170);
+            this.BTN模板匹配测试.Name = "BTN模板匹配测试";
+            this.BTN模板匹配测试.Size = new System.Drawing.Size(75, 23);
+            this.BTN模板匹配测试.TabIndex = 0;
+            this.BTN模板匹配测试.Text = "测试";
+            this.BTN模板匹配测试.UseVisualStyleBackColor = true;
+            this.BTN模板匹配测试.Click += new System.EventHandler(this.BTN模板匹配测试_Click);
             // 
             // Form1
             // 
@@ -626,6 +650,7 @@
             this.TP扫码测试.PerformLayout();
             this.MS_Camera.ResumeLayout(false);
             this.MS_Camera.PerformLayout();
+            this.TP模板匹配.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -683,6 +708,8 @@
         private System.Windows.Forms.OpenFileDialog OFD识别图片码;
         private System.Windows.Forms.TextBox TB_Code;
         private System.Windows.Forms.ToolStripMenuItem TSM设置;
+        private System.Windows.Forms.TabPage TP模板匹配;
+        private System.Windows.Forms.Button BTN模板匹配测试;
     }
 }
 
