@@ -79,8 +79,8 @@
             this.TSM停止扫码 = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM拍摄 = new System.Windows.Forms.ToolStripMenuItem();
             this.TP模板匹配 = new System.Windows.Forms.TabPage();
-            this.OFD识别图片码 = new System.Windows.Forms.OpenFileDialog();
             this.BTN模板匹配测试 = new System.Windows.Forms.Button();
+            this.OFD识别图片码 = new System.Windows.Forms.OpenFileDialog();
             this.TC_Main.SuspendLayout();
             this.TP轴测试.SuspendLayout();
             this.GB特殊信号控制.SuspendLayout();
@@ -607,10 +607,6 @@
             this.TP模板匹配.Text = "模板匹配测试";
             this.TP模板匹配.UseVisualStyleBackColor = true;
             // 
-            // OFD识别图片码
-            // 
-            this.OFD识别图片码.FileName = "openFileDialog";
-            // 
             // BTN模板匹配测试
             // 
             this.BTN模板匹配测试.Location = new System.Drawing.Point(380, 170);
@@ -620,6 +616,10 @@
             this.BTN模板匹配测试.Text = "测试";
             this.BTN模板匹配测试.UseVisualStyleBackColor = true;
             this.BTN模板匹配测试.Click += new System.EventHandler(this.BTN模板匹配测试_Click);
+            // 
+            // OFD识别图片码
+            // 
+            this.OFD识别图片码.FileName = "openFileDialog";
             // 
             // Form1
             // 

@@ -241,7 +241,7 @@ namespace MotionDemo
             //Mat temp = Cv2.ImRead("C:\\Users\\1\\Desktop\\test\\测试图片\\test1.2.png");
             //Mat result = Match.MatchingMethod(img, temp);
             //Cv2.ImShow("match", result);
-
+            Match.Matching();
         }
     }
 }
